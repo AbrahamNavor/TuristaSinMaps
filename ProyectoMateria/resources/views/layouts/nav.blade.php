@@ -31,14 +31,14 @@
                     </li>
                 </ul>
             </div>
-            <div class="d-flex justify-content-center w-100">
+            <div class="d-flex justify-content-center">
                 <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 400px;">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
             </div>
             <div class="d-flex align-items-center">
-                <span class="me-2">Nombre de Usuario</span>
+                <span class="me-2">Inicia Sesion</span>
                 <img src="" alt="User Icon" class="rounded-circle" width="30" height="30">
             </div>
         </div>
