@@ -76,67 +76,73 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="card mb-4">
-                            <img src="ruta/a/imagen1.jpg" class="card-img-top" alt="Imagen de vuelo">
+                            <img src="https://picsum.photos/700/400?random" class="card-img-top" alt="Imagen de vuelo">
                             <div class="card-body">
                                 <h5 class="card-title">Vuelo 1</h5>
                                 <p class="card-text">Descripción del vuelo 1.</p>
                                 <p class="card-text"><strong>Costo:</strong> $100</p>
                                 <p class="card-text"><strong>Reseñas:</strong> ★★★★☆</p>
+                                <a href="{{ route('rutavermas') }}" class="btn btn-primary">Ver más</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card mb-4">
-                            <img src="ruta/a/imagen2.jpg" class="card-img-top" alt="Imagen de vuelo">
+                            <img src="https://picsum.photos/700/400?random" class="card-img-top" alt="Imagen de vuelo">
                             <div class="card-body">
                                 <h5 class="card-title">Vuelo 2</h5>
                                 <p class="card-text">Descripción del vuelo 2.</p>
                                 <p class="card-text"><strong>Costo:</strong> $200</p>
                                 <p class="card-text"><strong>Reseñas:</strong> ★★★☆☆</p>
+                                <a href="{{ route('rutavermas') }}" class="btn btn-primary">Ver más</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card mb-4">
-                            <img src="ruta/a/imagen2.jpg" class="card-img-top" alt="Imagen de vuelo">
+                            <img src="https://picsum.photos/700/400?random" class="card-img-top" alt="Imagen de vuelo">
                             <div class="card-body">
                                 <h5 class="card-title">Vuelo 3</h5>
                                 <p class="card-text">Descripción del vuelo 2.</p>
                                 <p class="card-text"><strong>Costo:</strong> $200</p>
                                 <p class="card-text"><strong>Reseñas:</strong> ★★★☆☆</p>
+                                <a href="{{ route('rutavermas') }}" class="btn btn-primary">Ver más</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card mb-4">
-                            <img src="ruta/a/imagen2.jpg" class="card-img-top" alt="Imagen de vuelo">
+                            <img src="https://picsum.photos/700/400?random" class="card-img-top" alt="Imagen de vuelo">
                             <div class="card-body">
                                 <h5 class="card-title">Vuelo 4</h5>
                                 <p class="card-text">Descripción del vuelo 2.</p>
                                 <p class="card-text"><strong>Costo:</strong> $200</p>
                                 <p class="card-text"><strong>Reseñas:</strong> ★★★☆☆</p>
+                                <a href="{{ route('rutavermas') }}" class="btn btn-primary">Ver más</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card mb-4">
-                            <img src="ruta/a/imagen2.jpg" class="card-img-top" alt="Imagen de vuelo">
+                            <img src="https://picsum.photos/700/400?random" class="card-img-top" alt="Imagen de vuelo">
                             <div class="card-body">
                                 <h5 class="card-title">Vuelo 5</h5>
                                 <p class="card-text">Descripción del vuelo 2.</p>
                                 <p class="card-text"><strong>Costo:</strong> $200</p>
                                 <p class="card-text"><strong>Reseñas:</strong> ★★★☆☆</p>
+                                <a href="{{ route('rutavermas') }}" class="btn btn-primary">Ver más</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card mb-4">
-                            <img src="ruta/a/imagen2.jpg" class="card-img-top" alt="Imagen de vuelo">
+                            <img src="https://picsum.photos/700/400?random" class="card-img-top" alt="Imagen de vuelo">
                             <div class="card-body">
                                 <h5 class="card-title">Vuelo 6</h5>
                                 <p class="card-text">Descripción del vuelo 2.</p>
                                 <p class="card-text"><strong>Costo:</strong> $200</p>
                                 <p class="card-text"><strong>Reseñas:</strong> ★★★☆☆</p>
+                                <a href="{{ route('rutavermas') }}" class="btn btn-primary">Ver más</a>
                             </div>
                         </div>
                     </div>

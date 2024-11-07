@@ -40,9 +40,11 @@
 <body class="d-flex flex-column min-vh-100 bg-gradient" style="background: linear-gradient(to right, #ff7e5f, #feb47b);">
 
     <div class="container d-flex flex-column justify-content-center align-items-center text-center flex-grow-1">
-        <h1 class="display-1 display-1-custom">Bienvenido Turista!</h1>
-        <p class="text-black">Presiona el botón para iniciar...</p>
-        <a href="{{ route('rutahoteles') }}" class="btn btn-custom">Iniciar Sesion</a>
+        <h1 class="display-1-custom">Bienvenido a TuristaSinMaps</h1>
+        <p class="text-white">Presiona el botón para iniciar...</p>
+
+        <a href="{{ route('rutasesion') }}" class="btn btn-custom mb-2">Iniciar Sesion</a>
+
         <a href="{{ route('rutaregistro') }}" class="btn btn-custom">Registrarse</a>
     </div>
 
