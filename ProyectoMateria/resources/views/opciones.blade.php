@@ -5,6 +5,11 @@
 @section('nav')
 <div class="container vh-100 d-flex align-items-center justify-content-center">
     <div class="row justify-content-center w-100">
+        @if(session('exito'))
+            <div class="alert alert-success w-100 text-center">
+                {{ session('exito') }}
+            </div>
+        @endif
         <div class="col-md-4 mb-4">
             <div class="card">
                 <div class="card-body">

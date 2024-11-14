@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class Controlador extends Controller
@@ -23,7 +22,7 @@ class Controlador extends Controller
     {
         return view('hoteles');
     }
-    public function g_usuarios()
+    public function gestion_usuario()
     {
         return view('gestion_usuario');
     }
@@ -31,7 +30,7 @@ class Controlador extends Controller
     {
         return view('sesion');
     }
-    public function g_admin()
+    public function gestion_admin()
     {
         return view('gestion_admin');
     }
@@ -65,26 +64,9 @@ class Controlador extends Controller
         return view('sesion');
     }
 
-    public function procesarSesion(Request $request)
+    public function cerrarSesion()
     {
-        $usuarios = [
-            'admin@gmail.com' => ['password' => 'admin', 'name' => 'Admin', 'role' => 'admin'],
-            'usuario@gmail.com' => ['password' => 'usuario', 'name' => 'Navor', 'role' => 'user']
-        ];
-
-        $usuario = $request->input('email');
-        $contrasena = $request->input('contrasena');
-
-        if (isset($usuarios[$usuario]) && $usuarios[$usuario]['password'] == $contrasena) {
-            session(['usuario' => $usuarios[$usuario]]);
-            return view('opciones');
-        } else {
-            return view('sesion');
-        }
-    }
-
-    public function cerrarSesion(){
-        session()->forget('usuario');
-        return redirect()->route('rutasesion');
+        // Add your logout logic here
+        return redirect()->route('rutainicio');
     }
 }

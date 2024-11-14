@@ -8,10 +8,10 @@ Route::get('/', [Controlador::class, 'inicio'])->name('rutainicio');
 Route::get('/vuelos', [Controlador::class, 'vuelos'])->name('rutavuelos');
 Route::get('/registro', [Controlador::class, 'registro'])->name('rutaregistro');
 Route::get('/hoteles', [Controlador::class, 'hoteles'])->name('rutahoteles');
-Route::get('/g_usuarios', [Controlador::class, 'gesion_usuario'])->name('rutag_usuarios');
+Route::get('/g_usuarios', [Controlador::class, 'gestion_usuario'])->name('rutag_usuarios');
 Route::get('/inicio_sesion', [Controlador::class, 'inicio_sesion'])->name('rutasesion');
 Route::get('/g_admin', [Controlador::class, 'gestion_admin'])->name('rutag_admin');
-Route::get('/opciones', [Controlador::class, 'opciones'])->name('rutaopciones');
+Route::get('/opciones', [Controlador::class, 'opciones'])->name('opciones');
 Route::get('/vermas', [Controlador::class, 'vermas'])->name('rutavermas');
 Route::get('/vermashotel', [Controlador::class, 'vermashotel'])->name('rutavermashotel');
 Route::get('/reservacion', [Controlador::class, 'reservacion'])->name('rutareservacion');
@@ -21,7 +21,9 @@ Route::get('/sesion', [Controlador::class, 'sesion'])->name('rutasesion');
 
 Route::get('/componente', [Controlador::class, 'componente'])->name('rutacomponente');
 
-Route::post('/procesarSesion', [Controlador::class, 'procesarSesion'])->name('rutaprocesarSesion');
+Route::post('/procesarSesion', [ControladorRegistros::class, 'procesarSesion'])->name('procesarSesion');
 Route::post('/registro', [ControladorRegistros::class, 'procesarRegistro'])->name('rutaprocesarRegistro');
 Route::get('/cerrar-sesion', [Controlador::class, 'cerrarSesion'])->name('cerrarSesion');
+
+
 

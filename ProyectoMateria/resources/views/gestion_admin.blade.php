@@ -11,17 +11,28 @@
                     <th>ID</th>
                     <th>Nombre</th>
                     <th>Email</th>
-                    <th>Acciones</th>
                 </tr>
             </thead>
-            <tr>
-                <td>1</td>
-                <td>Admin</td>
-                <td>
-                    <button class="btn btn-primary">Editar</button>
-                    <button class="btn btn-danger">Eliminar</button>  
-                </td>
-            </tr>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Admin1</td>
+                    <td>admin@example.com</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Admin2</td>
+                    <td>admin2@example.com</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Admin3</td>
+                    <td>admin3@example.com</td>
+                </tr>
+            </tbody>
         </table>
+        <div class="container mt-5">
+            <a href="{{ route('rutasesion') }}" class="btn btn-success">Regresar a Inicio Sesión</a>
+        </div>
     </div>
 @endsection
