@@ -11,25 +11,29 @@
             @endforeach
         </div>
     @endif
-        <h1>Inicia Sesion</h1>
-        <form action="{{ route('procesarSesion') }}" method="POST">
-            @csrf
-            <div class="mb-3">
+        <div class="row justify-content-center"></div>
+            <div class="col-md-6">
+            <h1>Inicia Sesion</h1>
+            <form action="{{ route('procesarSesion') }}" method="POST">
+                @csrf
+                <div class="mb-3">
                 <label for="email" class="form-label">Correo Electrónico</label>
                 <input type="email" class="form-control" id="email" name="email">
                 @if ($errors->has('email'))
                     <small class="text-danger">{{ $errors->first('email') }}</small>
                 @endif
-            </div>
-            <div class="mb-3">
+                </div>
+                <div class="mb-3">
                 <label for="contrasena" class="form-label">Contraseña</label>
                 <input type="password" class="form-control" id="contrasena" name="contrasena">
                 @if ($errors->has('contrasena'))
                     <small class="text-danger">{{ $errors->first('contrasena') }}</small>
                 @endif
-            </div>            
-            <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
-        </form>
+                </div>            
+                <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
+            </form>
+            </div>
+        </div>
         <div class="mt-3 d-flex justify-content-between">
             <a href="{{ route('rutag_admin') }}" class="btn btn" style="width: 45%;">Ver Admins</a>
             <a href="{{ route('rutag_usuarios') }}" class="btn btn" style="width: 45%;">Ver Usuarios</a>

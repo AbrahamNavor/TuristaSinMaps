@@ -35,23 +35,11 @@
                 </ul>
             </div>
         </div>
-        <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
-                style="width: 400px;">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
         <div class="d-flex align-items-center ms-3">
             @if (session()->has('usuario'))
-                @if (session('usuario.role') == 'admin')
-                    <a href="{{ route('rutasesion') }}" class="navbar-brand">{{ session('usuario.name') }}</a>
-                @else
-                    <a href="{{ route('rutasesion') }}" class="navbar-brand">{{ session('usuario.name') }}</a>
-                @endif
+            <a href="{{ route('cerrarSesion') }}" class="navbar-brand">Cerrar Sesión</a>
             @else
-                <a href="{{ route('rutasesion') }}" class="navbar-brand">Inicia Sesion</a>
-            @endif
-            @if (session()->has('usuario'))
-                <a href="{{ route('cerrarSesion') }}" class="navbar-brand">Cerrar Sesión</a>
+            <a href="{{ route('rutasesion') }}" class="navbar-brand">Inicia Sesion</a>
             @endif
         </div>
     </nav>

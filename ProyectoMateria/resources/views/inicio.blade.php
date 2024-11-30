@@ -9,17 +9,16 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .btn-custom {
-            background-color: #ff7e5f;
-            border: none;
             color: white;
             padding: 15px 30px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 16px;
+            font-size: 18px;
             margin: 4px 2px;
             transition-duration: 0.4s;
             cursor: pointer;
+            border-radius: 5px;
         }
 
         .btn-custom:hover {
@@ -32,20 +31,31 @@
             font-family: 'Arial', sans-serif;
             font-weight: bold;
             color: #ff7e5f;
-            text-shadow: 2px 2px #feb47b;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-size: 3.5rem;
+        }
+
+        .bg-custom {
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://regeneracion.mx/wp-content/uploads/2015/11/google-maps-new-interface.jpg') no-repeat center center;
+            background-size: cover;
+        }
+
+        .text-white-custom {
+            color: #ffffff;
+            font-size: 1.2rem;
         }
     </style>
 </head>
 
-<body class="d-flex flex-column min-vh-100 bg-gradient" style="background: linear-gradient(to right, #ff7e5f, #feb47b);">
+<body class="d-flex flex-column min-vh-100 bg-custom">
 
     <div class="container d-flex flex-column justify-content-center align-items-center text-center flex-grow-1">
         <h1 class="display-1-custom">Bienvenido a TuristaSinMaps</h1>
-        <p class="text-white">Presiona el botón para iniciar...</p>
+        <p class="text-white-custom">Presiona el botón para iniciar...</p>
 
-        <a href="{{ route('rutasesion') }}" class="btn btn-custom mb-2">Iniciar Sesion</a>
+        <a href="{{ route('rutasesion') }}" class="btn btn-custom mb-2 text-white">Iniciar Sesión</a>
 
-        <a href="{{ route('rutaregistro') }}" class="btn btn-custom">Registrarse</a>
+        <a href="{{ route('rutaregistro') }}" class="btn btn-custom text-white">Registrarse</a>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
