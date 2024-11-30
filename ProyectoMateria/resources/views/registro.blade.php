@@ -6,11 +6,12 @@
 <div class="container d-flex align-items-center justify-content-center" style="min-height: 100vh;">
     <div class="row justify-content-center w-100">
         <div class="col-md-10">
-            <div class="card">
+            <div class="card" style="background-color: rgba(0, 0, 0, 0.221);">
                 
                 <div class="card-header">Registro de Reservaciones</div>
                 
                 <div class="card-body">
+                    <br>
                     <form action="{{ route('rutaprocesarRegistro') }}" method="POST">
                         @csrf
                         <div class="form-group">
