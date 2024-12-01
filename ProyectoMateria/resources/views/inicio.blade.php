@@ -55,7 +55,7 @@
 
         <a href="{{ route('rutasesion') }}" class="btn btn-custom mb-2 text-white">Iniciar Sesión</a>
 
-        <a href="{{ route('rutaregistro') }}" class="btn btn-custom text-white">Registrarse</a>
+        <a href="{{ route('rutaregistro_usuario') }}" class="btn btn-custom text-white">Registrarse</a>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

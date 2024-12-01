@@ -17,12 +17,18 @@ Route::get('/vermashotel', [Controlador::class, 'vermashotel'])->name('rutaverma
 Route::get('/reservacion', [Controlador::class, 'reservacion'])->name('rutareservacion');
 Route::get('/home', [Controlador::class, 'home'])->name('rutahome');
 Route::get('/sesion', [Controlador::class, 'sesion'])->name('rutasesion');
+Route::get('/registroUsuario', [Controlador::class, 'registroUsuario'])->name('rutaregistro_usuario');
+Route::get('/registroVuelo', [Controlador::class, 'registroVuelo'])->name('rutaregistroVuelo');
+Route::get('/registroHotel', [Controlador::class, 'registroHotel'])->name('rutaregistroHotel');
 
 
 Route::get('/componente', [Controlador::class, 'componente'])->name('rutacomponente');
 
 Route::post('/procesarSesion', [ControladorRegistros::class, 'procesarSesion'])->name('procesarSesion');
 Route::post('/registro', [ControladorRegistros::class, 'procesarRegistro'])->name('rutaprocesarRegistro');
+Route::post('/procesarRegistroUsuario', [ControladorRegistros::class, 'procesarRegistroUsuario'])->name('procesarRegistroUsuario');
+route::post('/procesarRegistroVuelo', [ControladorRegistros::class, 'procesarRegistroVuelo'])->name('procesarRegistroVuelo');
+route::post('/procesarRegistroHotel', [ControladorRegistros::class, 'procesarRegistroHotel'])->name('procesarRegistroHotel');
 Route::get('/cerrar-sesion', [Controlador::class, 'cerrarSesion'])->name('cerrarSesion');
 
 

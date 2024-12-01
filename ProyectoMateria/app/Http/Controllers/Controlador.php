@@ -69,4 +69,16 @@ class Controlador extends Controller
         // Add your logout logic here
         return redirect()->route('rutainicio');
     }
+    public function registroUsuario()
+    {
+        return view('registroUsuario');
+    }
+    public function registroVuelo()
+    {
+        return view('registroVuelo');
+    }
+    public function registroHotel()
+    {
+        return view('registroHotel');
+    }
 }

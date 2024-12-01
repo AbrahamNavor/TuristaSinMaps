@@ -87,7 +87,9 @@
     </div>
 </div>
 <div class="text-center mt-4">
-    <a href="{{ route('rutahome') }}" class="btn btn-primary">Regresar al Home</a>
+    <a href="{{ route('rutahome') }}" class="btn btn-secondary">Regresar al Home</a>
+    <a href="{{ route('rutaregistro') }}" class="btn btn-primary">Realizar una Reservacion</a>
 </div>
+
 
 @endsection
