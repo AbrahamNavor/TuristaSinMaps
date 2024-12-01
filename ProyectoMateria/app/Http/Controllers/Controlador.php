@@ -22,17 +22,13 @@ class Controlador extends Controller
     {
         return view('hoteles');
     }
-    public function gestion_usuario()
+    public function gestion_usuarios()
     {
-        return view('gestion_usuario');
+        return view('gestion_usuarios');
     }
     public function inicio_sesion()
     {
         return view('sesion');
-    }
-    public function gestion_admin()
-    {
-        return view('gestion_admin');
     }
     public function opciones()
     {
@@ -54,10 +50,14 @@ class Controlador extends Controller
     {
         return view('home');
     }
-    public function componente()
+    public function CRUDvuelos()
     {
-        return view('componente');
+        return view('CRUDvuelos');
     }
+    public function CRUDhoteles()
+    {
+        return view('CRUDhoteles');
+    }   
 
     public function sesion()
     {
@@ -80,5 +80,9 @@ class Controlador extends Controller
     public function registroHotel()
     {
         return view('registroHotel');
+    }
+    public function homeAdmin()
+    {
+        return view('homeAdmin');
     }
 }

@@ -97,7 +97,11 @@ class ControladorRegistros extends Controller
 
         if (isset($usuarios[$email]) && $usuarios[$email]['password'] === $contrasena) {
             session(['usuario' => $usuarios[$email]]);
-            return redirect()->route('opciones')->with('exito', '¡Inicio de sesión exitoso!');
+            if ($usuarios[$email]['role'] === 'admin') {
+                return redirect()->route('rutahomeAdmin')->with('exito', '¡Inicio de sesión exitoso como administrador!');
+            } else {
+                return redirect()->route('rutahome')->with('exito', '¡Inicio de sesión exitoso!');
+            }
         } else {
             return redirect()->route('rutasesion')->withErrors(['email' => 'Credenciales incorrectas.']);
         }

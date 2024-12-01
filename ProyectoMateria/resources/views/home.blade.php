@@ -7,7 +7,6 @@
     @if (session('exito'))
         <script>
             Swal.fire({
-                title: "Registro exitoso",
                 text: "{{ session('exito') }}",
                 icon: "success"
             });
