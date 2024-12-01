@@ -21,7 +21,7 @@
                 <div class="card-header" style="font-size: 1.5rem; font-weight: bold;">Registro de Reservaciones</div>
                 
                 <div class="card-body">
-                    <form action="{{ route('rutaprocesarRegistro') }}" method="POST">
+                    <form action="{{ route('procesarRegistro') }}" method="POST">
                         @csrf
                         <div class="form-group">
                             <label for="nombre">Nombre</label>

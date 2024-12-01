@@ -25,6 +25,18 @@ return [
     'can'                  => 'El campo :attribute contiene un valor no autorizado.',
     'confirmed'            => 'La confirmación de :attribute no coincide.',
     'contains'             => 'Al campo :attribute le falta un valor obligatorio.',
+    'custom' => [
+    'txtfecha_regreso' => [
+        'after_or_equal' => 'La fecha de regreso debe ser igual o posterior a la fecha de salida.',
+    ],
+    'txtclase' => [
+        'in' => 'La clase seleccionada no es válida. Debe ser Económica, Business o Primera Clase.',
+    ],
+    'txthorario_llegada' => [
+        'after' => 'El horario de llegada debe ser posterior al horario de salida.',
+    ],
+],
+
     'current_password'     => 'La contraseña es incorrecta.',
     'date'                 => 'El campo :attribute debe ser una fecha válida.',
     'date_equals'          => 'El campo :attribute debe ser una fecha igual a :date.',

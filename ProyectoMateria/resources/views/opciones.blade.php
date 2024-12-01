@@ -10,6 +10,15 @@
                 {{ session('exito') }}
             </div>
         @endif
+        @if (session('exito'))
+        <script>
+            Swal.fire({
+                title: "Respuesta del servidor",
+                text: "{{ session('exito') }}",
+                icon: "success"
+            });
+        </script>
+    @endif
         <div class="col-md-4 mb-4">
             <div class="card">
                 <div class="card-body">
@@ -33,7 +42,7 @@
         <div class="col-md-4 mb-4">
             <div class="card">
                 <div class="card-body">
-                    <a href="{{ route('rutaregistro') }}" class="btn btn-success btn-lg w-100">
+                    <a href="{{ route('rutareservacion') }}" class="btn btn-success btn-lg w-100">
                         <i class="fas fa-book"></i> Reservaciones
                     </a>
                     <p class="mt-2">Gestiona todas tus reservaciones fácilmente.</p>

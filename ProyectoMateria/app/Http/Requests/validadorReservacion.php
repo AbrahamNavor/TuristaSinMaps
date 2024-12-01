@@ -11,7 +11,7 @@ class validadorReservacion extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -26,7 +26,7 @@ class validadorReservacion extends FormRequest
             'txtapellido' => 'required|string|max:255',
             'txtemail' => 'required|email|max:255',
             'txttelefono' => 'required|string|max:15',
-            'txtfecha' => 'required|date',
+            'txtreservacion' => 'required|date',
             'txthora' => 'required|date_format:H:i',
             'txtpersonas' => 'required|integer|min:1',
             'txtvuelo' => 'required|string|max:50',

@@ -11,7 +11,7 @@ class validadorHotel extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -26,7 +26,7 @@ class validadorHotel extends FormRequest
             'txtdireccion' => 'required|string|max:255',
             'txttelefono' => 'required|string|max:15',
             'txthabitaciones' => 'required|integer|min:1',
-            'txtcategoria' => 'required|integer|min:1',
+            'txtcategoria' => 'required|string|in:1 estrella,2 estrellas,3 estrellas,4 estrellas,5 estrellas',
             'txtservicios' => 'required|string|max:255',
         ];
     }

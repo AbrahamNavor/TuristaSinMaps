@@ -11,7 +11,7 @@ class validadorVuelo extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,16 @@ class validadorVuelo extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'txtorigen' => 'required|string|max:255',
+            'txtdestino' => 'required|string|max:255',
+            'txtfecha_salida' => 'required|date',
+            'txtfecha_regreso' => 'required|date',
+            'txtasientos' => 'required|integer|min:1',
+            'txtclase' => 'required|string|in:economica,ejecutiva,primera',
+            'txtaerolinea' => 'required|string|max:255',
+            'txtvuelo' => 'required|string|max:50',
+            'txthorario_salida' => 'required|date_format:H:i',
+            'txthorario_llegada' => 'required|date_format:H:i',
         ];
     }
 }

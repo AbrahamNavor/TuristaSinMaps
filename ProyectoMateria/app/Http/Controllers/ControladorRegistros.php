@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\validadorReservacion;
 use Illuminate\Http\Request;
 use App\Http\Requests\validadorUsuario;
 
@@ -14,13 +15,13 @@ class ControladorRegistros extends Controller
             'txtdireccion' => 'required|string|max:255',
             'txttelefono' => 'required|string|max:15',
             'txthabitaciones' => 'required|integer|min:1',
-            'txtcategoria' => 'required|integer|min:1',
+            'txtcategoria' => 'required|string|in:1 estrella,2 estrellas,3 estrellas,4 estrellas,5 estrellas',
             'txtservicios' => 'required|string|max:255',
         ]);
 
         session()->flash('exito', 'Hotel registrado exitosamente.');
 
-        return to_route('opciones');
+        return to_route('rutahome');
     }
     public function procesarRegistroVuelo(Request $request)
     {
@@ -28,14 +29,14 @@ class ControladorRegistros extends Controller
             'txtorigen' => 'required|string|max:255',
             'txtdestino' => 'required|string|max:255',
             'txtfecha_salida' => 'required|date',
-            'txtfecha_regreso' => 'required|date',
+            'txtfecha_regreso' => 'required|date|after_or_equal:txtfecha_salida',
             'txtasientos' => 'required|integer|min:1',
-            'txtclase' => 'required|string|max:50',
+            'txtclase' => 'required|string|in:economica,ejecutiva,primera', 
             'txtaerolinea' => 'required|string|max:255',
             'txtvuelo' => 'required|string|max:50',
             'txthorario_salida' => 'required|date_format:H:i',
-            'txthorario_llegada' => 'required|date_format:H:i',
-        ]);
+            'txthorario_llegada' => 'required|date_format:H:i|after:txthorario_salida', 
+        ]);        
 
         session()->flash('exito', 'Vuelo registrado exitosamente.');
 
@@ -59,25 +60,24 @@ class ControladorRegistros extends Controller
         return to_route('rutahome');
     }
 
-    public function procesarRegistro(Request $request)
-{
-    $request->validate([
-        'txtnombre' => 'required|string|max:255',
-        'txtapellido' => 'required|string|max:255',
-        'txtemail' => 'required|email|max:255',
-        'txttelefono' => 'required|string|max:15',
-        'txtfecha' => 'required|date',
-        'txthora' => 'required|date_format:H:i',
-        'txtpersonas' => 'required|integer|min:1',
-        'txtvuelo' => 'required|string|max:50',
-        'txthotel' => 'required|string|max:255',
-    ]);
+    public function procesarRegistro(validadorReservacion $peticion)
+    {
+        $peticion->validate([
+            'txtnombre' => 'required|string|max:255',
+            'txtapellido' => 'required|string|max:255',
+            'txtemail' => 'required|email|max:255',
+            'txttelefono' => 'required|string|max:15',
+            'txtreservacion' => 'required|date',
+            'txthora' => 'required|date_format:H:i',
+            'txtpersonas' => 'required|integer|min:1',
+            'txtvuelo' => 'required|string|max:50',
+            'txthotel' => 'required|string|max:255',
+        ]);
 
-    $usuario = $request->input('txtnombre');
-    session()->flash('exito', $usuario . ' su reservación fue exitosa.');
+        session()->flash('exito', 'Reservación realizada exitosamente.');
 
-    return to_route('opciones');
-}
+        return to_route('opciones');
+    }
 
 
     public function procesarSesion(Request $request)
