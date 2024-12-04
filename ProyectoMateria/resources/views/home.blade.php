@@ -24,7 +24,7 @@
     <div class="container mt-5">
         <div class="row align-items-center">
             <div class="col-md-6">
-                <img class="d-block w-100" src="https://picsum.photos/350/200?random=1" alt="Imagen de destino turístico">
+                <img class="img-fluid" src="https://picsum.photos/350/200?random=1" alt="Imagen de destino turístico">
             </div>
             <div class="col-md-6 d-flex flex-column justify-content-center">
                 <h2>Explora Nuevos Horizontes</h2>
@@ -35,20 +35,20 @@
     </div>
     <div class="container mt-5">
         <div class="row align-items-center">
-            <div class="col-md-6 d-flex flex-column justify-content-center">
+            <div class="col-md-6 d-flex flex-column justify-content-center order-md-2">
                 <h2>Consejos de Viaje</h2>
                 <p>Obtén los mejores consejos de viaje, desde cómo empacar eficientemente hasta cómo encontrar las mejores
                     ofertas en vuelos y alojamiento.</p>
             </div>
-            <div class="col-md-6">
-                <img class="d-block w-100" src="https://picsum.photos/350/200?random=2" alt="Imagen de consejos de viaje">
+            <div class="col-md-6 order-md-1">
+                <img class="img-fluid" src="https://picsum.photos/350/200?random=2" alt="Imagen de consejos de viaje">
             </div>
         </div>
     </div>
     <div class="container mt-5">
         <div class="row align-items-center">
             <div class="col-md-6">
-                <img class="d-block w-100" src="https://picsum.photos/350/200?random=3" alt="Imagen de reservaciones">
+                <img class="img-fluid" src="https://picsum.photos/350/200?random=3" alt="Imagen de reservaciones">
             </div>
             <div class="col-md-6 d-flex flex-column justify-content-center">
                 <h2>Reservaciones Fáciles</h2>
@@ -59,18 +59,16 @@
     </div>
     <div class="container mt-5">
         <div class="row align-items-center">
-            <div class="col-md-6 d-flex flex-column justify-content-center">
+            <div class="col-md-6 d-flex flex-column justify-content-center order-md-2">
                 <h2>Búsqueda Personalizada</h2>
                 <p>Utiliza nuestras herramientas de búsqueda avanzada para encontrar el hotel perfecto y los vuelos más
                     convenientes para tu viaje. Personaliza tu búsqueda según tus preferencias y presupuesto.</p>
             </div>
-            <div class="col-md-6">
-                <img class="d-block w-100" src="https://picsum.photos/350/200?random=4"
+            <div class="col-md-6 order-md-1">
+                <img class="img-fluid" src="https://picsum.photos/350/200?random=4"
                     alt="Imagen de búsqueda personalizada">
             </div>
         </div>
     </div>
 
 @endsection
-
-

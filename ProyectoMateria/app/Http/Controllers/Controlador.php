@@ -22,9 +22,9 @@ class Controlador extends Controller
     {
         return view('hoteles');
     }
-    public function gestion_usuarios()
+    public function CRUDusuarios()
     {
-        return view('gestion_usuarios');
+        return view('CRUDusuarios');
     }
     public function inicio_sesion()
     {
@@ -66,8 +66,7 @@ class Controlador extends Controller
 
     public function cerrarSesion()
     {
-        // Add your logout logic here
-        return redirect()->route('rutainicio');
+        return view('inicio');
     }
     public function registroUsuario()
     {

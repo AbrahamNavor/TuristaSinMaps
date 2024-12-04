@@ -4,24 +4,24 @@
 
 @section('nav')
 <div class="container d-flex align-items-center justify-content-center" style="min-height: 100vh;">
-        @if(session('exito'))
-            <script>
-                Swal.fire({
-                    title: "Respuesta del servidor",
-                    text: "{{ session('exito') }}",
-                    icon: "success"
-                });
-            </script>
-        @endif
+    @if(session('exito'))
+        <script>
+            Swal.fire({
+                title: "Respuesta del servidor",
+                text: "{{ session('exito') }}",
+                icon: "success"
+            });
+        </script>
+    @endif
     <div class="row justify-content-center w-100">
         <br>
-        <div class="col-md-10">
+        <div class="col-12 col-md-10">
             <div class="card" style="background-color: rgba(0, 0, 0, 0.221);">
                 
                 <div class="card-header" style="font-size: 1.5rem; font-weight: bold;">Registro de Usuario</div>
                 
                 <div class="card-body">
-                    <form action="{{ route('procesarRegistroUsuario') }}" method="POST">
+                    <form action="{{ route('registro.store') }}" method="POST">
                         @csrf
                         <div class="form-group">
                             <label for="nombre">Nombre</label>
@@ -63,7 +63,7 @@
                         <br>
 
                         <button type="submit" class="btn btn-success">Registrar</button>
-                        <a href="#" class="btn btn-secondary ml-2">Cancelar</a>
+                        <a href="{{ url()->previous() }}" class="btn btn-secondary ml-2">Cancelar</a>
                     </form>
                 </div>
             </div>

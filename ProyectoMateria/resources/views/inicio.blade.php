@@ -35,6 +35,12 @@
             font-size: 3.5rem;
         }
 
+        @media (max-width: 768px) {
+            .display-1-custom {
+                font-size: 2.5rem;
+            }
+        }
+
         .bg-custom {
             background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://regeneracion.mx/wp-content/uploads/2015/11/google-maps-new-interface.jpg') no-repeat center center;
             background-size: cover;
@@ -43,6 +49,12 @@
         .text-white-custom {
             color: #ffffff;
             font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .text-white-custom {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
@@ -55,21 +67,34 @@
 
         <a href="{{ route('rutasesion') }}" class="btn btn-custom mb-2 text-white">Iniciar Sesión</a>
 
-        <a href="{{ route('rutaregistro_usuario') }}" class="btn btn-custom text-white">Registrarse</a>
+        <a href="{{ route('registro.create') }}" class="btn btn-custom text-white">Registrarse</a>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<footer class="bg-dark text-white mt-auto py-3">
-    <div class="container text-center">
-        <p>&copy; 2023 TuristaSinMaps. Todos los derechos reservados.</p>
-        <p>
-            <a href="#" class="text-white">Política de Privacidad</a> |
-            <a href="#" class="text-white">Términos de Servicio</a>
-        </p>
-    </div>
-</footer>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+    @if(session('exito'))
+        <script>
+            Swal.fire({
+                title: "Respuesta del servidor",
+                text: "{{ session('exito') }}",
+                icon: "success"
+            });
+        </script>
+    @endif
+
+    <footer class="bg-dark text-white mt-auto py-3">
+        <div class="container text-center">
+            <p>&copy; 2023 TuristaSinMaps. Todos los derechos reservados.</p>
+            <p>
+                <a href="#" class="text-white">Política de Privacidad</a> |
+                <a href="#" class="text-white">Términos de Servicio</a>
+            </p>
+        </div>
+    </footer>
 </body>
 
 </html>

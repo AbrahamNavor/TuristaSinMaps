@@ -19,7 +19,7 @@
                     });
                 </script>
             @endif
-            <div class="col-md-4 mb-4">
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
                 <div class="card h-100">
                     <div class="card-body d-flex flex-column">
                         <a href="{{ route('rutaCRUDvuelos') }}" class="btn btn-success btn-lg w-100 mb-2">
@@ -29,7 +29,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4">
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
                 <div class="card h-100">
                     <div class="card-body d-flex flex-column">
                         <a href="{{ route('rutaCRUDhoteles') }}" class="btn btn-success btn-lg w-100 mb-2">
@@ -39,7 +39,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4">
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
                 <div class="card h-100">
                     <div class="card-body d-flex flex-column">
                         <a href="#" class="btn btn-success btn-lg w-100 mb-2">
@@ -49,17 +49,17 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4">
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
                 <div class="card">
                     <div class="card-body">
-                        <a href="{{ route('rutagestion_usuario') }}" class="btn btn-primary btn-lg w-100">
+                        <a href="{{ route('rutaCRUDusuarios') }}" class="btn btn-primary btn-lg w-100">
                             <i class="fas fa-users"></i> Gestionar Usuarios
                         </a>
                         <p class="mt-2">Administra los usuarios de la plataforma.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4">
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
                 <div class="card">
                     <div class="card-body">
                         <a href="#" class="btn btn-primary btn-lg w-100">

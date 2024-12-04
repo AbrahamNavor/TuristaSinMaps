@@ -19,7 +19,7 @@
             });
         </script>
     @endif
-        <div class="col-md-4 mb-4">
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
             <div class="card">
                 <div class="card-body">
                     <a href="{{ route('rutavuelos') }}" class="btn btn-success btn-lg w-100">
@@ -29,7 +29,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4 mb-4">
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
             <div class="card">
                 <div class="card-body">
                     <a href="{{ route('rutahoteles') }}" class="btn btn-success btn-lg w-100">
@@ -39,7 +39,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4 mb-4">
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
             <div class="card">
                 <div class="card-body">
                     <a href="{{ route('rutareservacion') }}" class="btn btn-success btn-lg w-100">

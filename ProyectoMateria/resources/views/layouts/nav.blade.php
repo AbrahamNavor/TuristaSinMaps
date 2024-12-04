@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg" style="background-color: #B8AA95;">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #B8AA95;">
         <div class="container-fluid">
             <a href="{{ route('rutainicio') }}" class="navbar-brand">Turista sin Maps |</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,16 +24,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active {{ request()->routeIs('rutahome')?"text-warning":"" }}" aria-current="page" href="{{ route('rutahome') }}">Home</a>
+                        <a class="nav-link active {{ request()->routeIs('rutahome') ? 'text-danger' : '' }}" aria-current="page" href="{{ route('rutahome') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->routeIs('rutavuelos')?"text-warning":"" }}" href="{{ route('rutavuelos') }}">Busqueda Vuelos</a>
+                        <a class="nav-link {{ request()->routeIs('rutavuelos') ? 'text-danger' : '' }}" href="{{ route('rutavuelos') }}">Busqueda Vuelos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->routeIs('rutahoteles')?"text-warning":"" }}" href="{{ route('rutahoteles') }}">Busqueda Hoteles</a>
+                        <a class="nav-link {{ request()->routeIs('rutahoteles') ? 'text-danger' : '' }}" href="{{ route('rutahoteles') }}">Busqueda Hoteles</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->routeIs('rutareservacion')?"text-warning":"" }}" href="{{ route('rutareservacion') }}">Reservaciones</a>
+                        <a class="nav-link {{ request()->routeIs('rutareservacion') ? 'text-danger' : '' }}" href="{{ route('rutareservacion') }}">Reservaciones</a>
                     </li>
                 </ul>
                 <div class="d-flex align-items-center ms-3">
@@ -47,10 +47,14 @@
         </div>
     </nav>
 
-    @yield('nav')
+    <div class="container">
+        @yield('nav')
+    </div>
 
-    <footer>
-        @yield('footer')
+    <footer class="mt-auto py-3 bg-light">
+        <div class="container">
+            @yield('footer')
+        </div>
     </footer>
 </body>
 

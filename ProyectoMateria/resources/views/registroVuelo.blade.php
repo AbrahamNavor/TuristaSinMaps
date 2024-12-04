@@ -3,25 +3,25 @@
 @section('titulo', 'Registro de Vuelos')
 
 @section('nav')
-<div class="container d-flex align-items-center justify-content-center" style="min-height: 100vh;">
-        @if(session('exito'))
-            <script>
-                Swal.fire({
-                    title: "Respuesta del servidor",
-                    text: "{{ session('exito') }}",
-                    icon: "success"
-                });
-            </script>
-        @endif
+<div class="container-fluid d-flex align-items-center justify-content-center" style="min-height: 100vh;">
+    @if(session('exito'))
+        <script>
+            Swal.fire({
+                title: "Respuesta del servidor",
+                text: "{{ session('exito') }}",
+                icon: "success"
+            });
+        </script>
+    @endif
     <div class="row justify-content-center w-100">
         <br>
-        <div class="col-md-10">
+        <div class="col-lg-8 col-md-10 col-sm-12">
             <div class="card" style="background-color: rgba(0, 0, 0, 0.221);">
                 
                 <div class="card-header" style="font-size: 1.5rem; font-weight: bold;">Registro de Vuelos</div>
                 
                 <div class="card-body">
-                    <form action="{{ route('procesarRegistroVuelo') }}" method="POST">
+                    <form action="{{ route('registroVuelos.store') }}" method="POST">
                         @csrf
                         <div class="form-group">
                             <label for="origen">Origen</label>
@@ -86,10 +86,15 @@
                             <input type="time" class="form-control" name="txthorario_llegada" value="{{ old('txthorario_llegada') }}">
                             <small class="text-danger fst-italic">{{ $errors->first('txthorario_llegada') }}</small>
                         </div>
+                        <div class="form-group">
+                            <label for="precio">Precio por Persona</label>
+                            <input type="number" step="0.01" class="form-control" name="txtprecio" value="{{ old('txtprecio') }}">
+                            <small class="text-danger fst-italic">{{ $errors->first('txtprecio') }}</small>
+                        </div>
                         <br>
 
                         <button type="submit" class="btn btn-success">Registrar</button>
-                        <a href="#" class="btn btn-secondary ml-2">Cancelar</a>
+                        <a href="{{ route('rutaCRUDvuelos') }}" class="btn btn-secondary ml-2">Cancelar</a>
                     </form>
                 </div>
             </div>

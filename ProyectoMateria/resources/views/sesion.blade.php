@@ -12,8 +12,19 @@
                 @endforeach
             </div>
             @endif
+
+            @if(session('exito'))
+                <script>
+                    Swal.fire({
+                        title: "Respuesta del servidor",
+                        text: "{{ session('exito') }}",
+                        icon: "success"
+                    });
+                </script>
+            @endif
+
             <div class="row justify-content-center">
-                <div class="col-md-6">
+                <div class="col-12 col-md-8 col-lg-6">
                     <div class="card" style="background-color: rgba(0, 0, 0, 0.221); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.221);">
                         <div class="card-body">
                             <h1 class="card-title">Inicia Sesion</h1>
@@ -33,15 +44,14 @@
                                         <small class="text-danger">{{ $errors->first('contrasena') }}</small>
                                     @endif
                                 </div>            
-                                <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
+                                <button type="submit" class="btn btn-primary w-100">Iniciar Sesion</button>
                             </form>
+                            <div class="mt-3 text-center">
+                                <a href="#">¿Olvidaste tu contraseña?</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="mt-3 d-flex justify-content-between">
-                <a href="{{ route('rutag_admin') }}" class="btn btn" style="width: 45%; background-color: rgba(0, 0, 0, 0.221); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">Ver Admins</a>
-                <a href="{{ route('rutag_usuarios') }}" class="btn btn" style="width: 45%; background-color: rgba(0, 0, 0, 0.221); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">Ver Usuarios</a>
             </div>
         </div>
     </div>

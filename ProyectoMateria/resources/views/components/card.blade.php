@@ -1,9 +1,11 @@
-<div class="alertify-card">
-    <div class="alertify-header">
+<div class="card">
+    <div class="card-header">
         <h3>{{ $Titulo }}</h3>
     </div>
-    <div class="alertify-body">
+    <div class="card-body">
         <p>{{ $Mensaje }}</p>
     </div>
-    <button>{{ $Boton }}</button>
+    <div class="card-footer">
+        <button class="btn btn-primary">{{ $Boton }}</button>
+    </div>
 </div>
