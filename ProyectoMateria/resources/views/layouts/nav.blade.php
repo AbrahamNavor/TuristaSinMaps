@@ -33,7 +33,7 @@
                         <a class="nav-link {{ request()->routeIs('rutahoteles') ? 'text-danger' : '' }}" href="{{ route('rutahoteles') }}">Busqueda Hoteles</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->routeIs('rutareservacion') ? 'text-danger' : '' }}" href="{{ route('rutareservacion') }}">Reservaciones</a>
+                        <a class="nav-link {{ request()->routeIs('reservas.index') ? 'text-danger' : '' }}" href="{{ route('reservas.index') }}">Reservaciones</a>
                     </li>
                 </ul>
                 <div class="d-flex align-items-center ms-3">

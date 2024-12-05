@@ -11,26 +11,26 @@ class ReservacionSeeder extends Seeder
     {
         DB::table('reservacion')->insert([
             [
-            'nombre' => 'Abraham',
-            'apellido' => 'Navor',
-            'email' => 'navor@example.com',
+            'nombre' => 'Carlos',
+            'apellido' => 'Gomez',
+            'email' => 'carlosgomez@example.com',
+            'telefono' => '1122334455',
+            'fecha' => '2024-12-01',
+            'hora' => '18:30:00',
+            'personas' => 3,
+            'vuelo' => 'AM9876',
+            'hotel' => 'Hotel Z',
+            ],
+        [
+            'nombre' => 'Ana',
+            'apellido' => 'Martinez',
+            'email' => 'anamartinez@example.com',
             'telefono' => '1234567890',
-            'fecha' => '2024-11-30',
-            'hora' => '21:09:32',
+            'fecha' => '2024-11-25',
+            'hora' => '20:00:00',
             'personas' => 2,
             'vuelo' => 'AM1234',
             'hotel' => 'Hotel X',
-        ],
-        [
-            'nombre' => 'Juan',
-            'apellido' => 'Perez',
-            'email' => 'juanperez@example.com',
-            'telefono' => '0987654321',
-            'fecha' => '2024-11-30',
-            'hora' => '21:09:32',
-            'personas' => 4,
-            'vuelo' => 'AM5678',
-            'hotel' => 'Hotel Y',
         ],
         ]);
 

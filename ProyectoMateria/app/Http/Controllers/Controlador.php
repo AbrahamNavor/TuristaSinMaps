@@ -42,10 +42,6 @@ class Controlador extends Controller
     {
         return view('vermashotel');
     }
-    public function reservacion()
-    {
-        return view('reservacion');
-    }
     public function home()
     {
         return view('home');
@@ -83,5 +79,10 @@ class Controlador extends Controller
     public function homeAdmin()
     {
         return view('homeAdmin');
+    }
+    
+    public function reservacion()
+    {
+        return view('reservacion');
     }
 }

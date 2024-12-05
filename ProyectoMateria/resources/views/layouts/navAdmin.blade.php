@@ -34,13 +34,10 @@
                         <a class="nav-link {{ request()->routeIs('rutaCRUDhoteles')?"text-primary":"" }}" href="{{ route('rutaCRUDhoteles') }}">CRUD Hoteles</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->routeIs('rutareservacion')?"text-primary":"" }}" href="{{ route('rutareservacion') }}">Politicas/Condiciones</a>
+                        <a class="nav-link {{ request()->routeIs('rutaPoliticasAdmin')?"text-primary":"" }}" href="{{ route('rutaPoliticasAdmin') }}">Politicas/Condiciones</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {{ request()->routeIs('rutaCRUDusuarios')?"text-primary":"" }}" href="{{ route('rutaCRUDusuarios') }}">Gestión Usuarios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {{ request()->routeIs('rutareservacion')?"text-primary":"" }}" href="{{ route('rutareservacion') }}">Reportes</a>
                     </li>
                 </ul>
                 <div class="d-flex align-items-center ms-3">

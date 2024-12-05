@@ -42,7 +42,7 @@
             <div class="col-12 col-md-6 col-lg-4 mb-4">
                 <div class="card h-100">
                     <div class="card-body d-flex flex-column">
-                        <a href="#" class="btn btn-success btn-lg w-100 mb-2">
+                        <a href="{{ route('rutaPoliticasAdmin') }}" class="btn btn-success btn-lg w-100 mb-2">
                             <i class="fas fa-file-contract"></i> Politicas de Cancelación y condiciones
                         </a>
                         <p class="mt-2 flex-grow-1">Revisa y administra las políticas de cancelación y condiciones.</p>
@@ -56,16 +56,6 @@
                             <i class="fas fa-users"></i> Gestionar Usuarios
                         </a>
                         <p class="mt-2">Administra los usuarios de la plataforma.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <a href="#" class="btn btn-primary btn-lg w-100">
-                            <i class="fas fa-chart-line"></i> Ver Reportes
-                        </a>
-                        <p class="mt-2">Consulta los reportes y estadísticas.</p>
                     </div>
                 </div>
             </div>

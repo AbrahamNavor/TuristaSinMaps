@@ -60,7 +60,6 @@
                                     @csrf
                                     @method('PUT')
                                     <div class="modal-body">
-                                        {{-- Campos para actualizar --}}
                                         <div class="mb-3">
                                             <label>Nombre:</label>
                                             <input type="text" name="txtnombre" class="form-control" value="{{ $registroHoteles->nombre }}" required>

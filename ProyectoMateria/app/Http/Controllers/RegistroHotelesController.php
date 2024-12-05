@@ -84,11 +84,6 @@ class RegistroHotelesController extends Controller
         session()->flash('exito', 'Hotel eliminado exitosamente.');
         return redirect()->route('rutaCRUDhoteles');
     }
-    public function mostrarHoteles()
-    {
-        $hoteles = registroHoteles::all(); // Obtiene todos los vuelos
-        return view('hoteles', compact('hoteles')); // Retorna la vista con los datos
-    }
 
     public function buscar(Request $request)
     {
@@ -110,7 +105,7 @@ class RegistroHotelesController extends Controller
         if (!empty($habitaciones)) {
             $query->where('habitaciones', '>=', $habitaciones); // Busca mínimo este número de habitaciones
         }
-        
+
         if (!empty($categoria)) {
             $query->where('categoria', $categoria); // Comparación directa si las categorías son únicas
         }
@@ -124,6 +119,11 @@ class RegistroHotelesController extends Controller
         return view('hoteles', compact('hoteles'));
     }
 
+    public function mostrarHoteles()
+    {
+        $hoteles = registroHoteles::all(); // Obtiene todos los vuelos
+        return view('hoteles', compact('hoteles')); // Retorna la vista con los datos
+    }
 
     public function verHotel($id)
     {
@@ -137,5 +137,33 @@ class RegistroHotelesController extends Controller
 
         // Retorna la vista con los detalles del hotel
         return view('vermashotel', compact('hotel'));
+    }
+
+
+
+
+    public function editarPoliticas(Request $request, $id)
+    {
+        $request->validate([
+            'txtpoliticas' => 'required|string|max:255',
+        ]);
+
+        $hotel = registroHoteles::findOrFail($id); // Busca el hotel por ID
+        $hotel->politicas = $request->input('txtpoliticas'); // Actualiza solo las políticas
+        $hotel->save(); // Guarda los cambios
+
+        session()->flash('exito', 'Políticas actualizadas exitosamente.');
+        return redirect()->route('rutaPoliticasAdmin'); 
+    }
+    public function mostrarPoliticas($id)
+    {
+        $hotel = registroHoteles::findOrFail($id); // Busca el hotel por ID
+        return view('editarPoliticas', compact('registroHoteles'));
+    }
+
+    public function politicasAdmin()
+    {
+        $consulta = registroHoteles::all();
+        return view('politicasAdmin', compact('consulta'));
     }
 }

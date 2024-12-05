@@ -6,6 +6,7 @@ use App\Http\Controllers\Controlador;
 use App\Http\Controllers\ControladorRegistros;
 use App\Http\Controllers\RegistroVuelosController;
 use App\Http\Controllers\RegistroHotelesController;
+use App\Http\Controllers\ReservacionController;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
@@ -72,9 +73,6 @@ Route::get('/vuelos', [RegistroVuelosController::class, 'mostrarVuelos'])->name(
 Route::get('/buscar-vuelos', [RegistroVuelosController::class, 'buscar'])->name('rutaBuscarVuelos');
 Route::get('/vuelos/{id}', [RegistroVuelosController::class, 'verMas'])->name('verMasVuelo');
 
-
-
-
 // Rutas del controlador de hoteles (RegistroHotelesController)
 Route::resource('registroHoteles', RegistroHotelesController::class);
 Route::get('/registroHoteles', [RegistroHotelesController::class, 'create'])->name('rutaregistro_hoteles');
@@ -85,6 +83,12 @@ Route::get('/buscar-hoteles', [RegistroHotelesController::class, 'buscar'])->nam
 Route::get('/hoteles/{id}', [RegistroHotelesController::class, 'verHotel'])->name('verHotel');
 
 
+Route::get('/politicasAdmin', [RegistroHotelesController::class, 'politicasAdmin'])->name('rutaPoliticasAdmin');
+Route::post('/hoteles/{id}/editar-politicas', [RegistroHotelesController::class, 'editarPoliticas'])->name('editarPoliticas');
+Route::get('/hoteles/{id}/politicas', [RegistroHotelesController::class, 'mostrarPoliticas'])->name('mostrarPoliticas');
+
+
+Route::get('/reservacion', [Controlador::class, 'reservacion'])->name('rutaReservacion');
 
 
 // Rutas de autenticación
@@ -93,3 +97,4 @@ Route::get('/verify-email/{token}', [RegistroController::class, 'verifyEmail'])-
 Route::get('/verificar-correo/{token}', [RegistroController::class, 'verifyEmail'])->name('verify.email');
 
 
+Route::get('/reservaciones', [ReservacionController::class, 'index'])->name('reservas.index');

@@ -20,6 +20,14 @@
                     <p><strong>Fecha Salida:</strong> {{ $vuelo->fecha_salida }}</p>
                     <p><strong>Fecha Regreso:</strong> {{ $vuelo->fecha_regreso }}</p>
                     <p><strong>Asientos:</strong>{{$vuelo->asientos}}</p>
+                    <p>
+                        <strong>Disponibilidad:</strong>
+                        @if ($vuelo->asientos > 0)
+                            <span class="text-success">Disponible</span>
+                        @else
+                            <span class="text-danger">No disponible</span>
+                        @endif
+                    </p>
                     <p><strong>Clase:</strong> {{ $vuelo->clase }}</p>
                     <p><strong>Aerolinea:</strong> {{ $vuelo->aerolinea }}</p>
                     <p><strong>Horario Salida:</strong> {{ $vuelo->horario_salida }}</p>

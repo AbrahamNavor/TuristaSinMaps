@@ -33,6 +33,7 @@
                             <div class="col-md-2">
                                 <label for="categoria" class="form-label">Categoría del Hotel</label>
                                 <select class="form-control" name="txtcategoria">
+                                    <option value=""></option>
                                     <option value="1 estrella">1 Estrella</option>
                                     <option value="2 estrellas">2 Estrellas</option>
                                     <option value="3 estrellas">3 Estrellas</option>
